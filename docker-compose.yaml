@@ -10,6 +10,7 @@ services:
         build: 
             dockerfile: Dockerfile.dev
             context: ./server
+        user: node
         volumes:
             - /usr/app/node_modules
             - ./server:/usr/app
@@ -27,6 +28,7 @@ services:
         build:
             dockerfile: Dockerfile.dev
             context: ./client
+        user: node
         volumes:
             - /usr/app/node_modules
             - ./client:/usr/app
@@ -36,6 +38,7 @@ services:
         build:
             dockerfile: Dockerfile.dev
             context: ./worker
+        user: node
         volumes:
             - /usr/app/node_modules
             - ./worker:/usr/app
